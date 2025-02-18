@@ -19,10 +19,27 @@ This project focuses on optimizing technical operations workflows by implementin
 ## Setup & Usage
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/Technical-Operations-TOC-Analysis.git
+   git clone https://github.com/KVSSNIRUPAM/Technical-Operations-TOC-Analysis.git
    ```
-2. Run the SQL scripts to set up the database.
-3. Open the Power BI dashboard to view real-time analytics.
+
+2. **Database Setup:**
+- Open the `incident_tracking.sql` file and execute the queries in a MySQL or PostgreSQL database.
+
+3. **Running the Python Script:**
+- Ensure you have Python installed (`python --version`).
+- Install dependencies using:
+  ```
+  pip install pandas numpy
+  ```
+- Run the script:
+  ```
+  python predictive_analysis.py
+  ```
+
+4. **Power BI Dashboard:**
+- Open `Dashboard.pbix` in Power BI.
+- Connect it to your SQL database for real-time analysis.
+
 
 ## Screenshots
 (Add Power BI dashboard images here)
