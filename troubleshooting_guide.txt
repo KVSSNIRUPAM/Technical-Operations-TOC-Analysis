@@ -1,0 +1,27 @@
+# Troubleshooting Guide for TOC
+
+## 1. Issue: System Downtime or Slow Response
+### Solution:
+- Check SQL logs for slow queries (`incident_tracking` table)
+- Verify network latency using `ping` command
+- Restart Airflow jobs for stuck processes
+
+## 2. Issue: High Severity Incidents Not Escalating
+### Solution:
+- Run the SQL query to check unresolved high-severity cases:
+  ```sql
+  SELECT * FROM incident_tracking WHERE severity_level > 7 AND status = 'Unresolved';
+  ```
+- Verify alert triggers in Airflow logs
+
+## 3. Issue: Power BI Dashboard Not Updating
+### Solution:
+- Refresh Power BI dataset manually
+- Check database connectivity and data pipeline status
+- Review error logs in Power BI Service
+
+## 4. Issue: Predictive Model Not Working
+### Solution:
+- Ensure `incident_data.csv` is correctly formatted
+- Check Python dependencies (`pandas`, `numpy` installed)
+- Run script again and verify output in `failure_prediction.csv`
